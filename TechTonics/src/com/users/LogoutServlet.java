@@ -31,6 +31,11 @@ public class LogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		 HttpSession session=request.getSession();
+		
+	       session.invalidate();
+	       response.sendRedirect("signinup.jsp");
 	}
 
 	/**
@@ -38,12 +43,10 @@ public class LogoutServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		 HttpSession session=request.getSession();
-		 System.out.println("inside get of logoiut servlet");
-	       session.invalidate();
-	       session.setAttribute("", null);
-	       RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-			dispatcher.forward(request, response);
+		HttpSession session=request.getSession();
+				
+		 session.invalidate();
+	       response.sendRedirect("signinup.jsp");
 	}
 
 }

@@ -16,7 +16,7 @@
 			<h2>
 			Welcome
 			<%=session.getAttribute("user")%></h2>
-			<a  class="btn btn-info" href="logoutServlet" style="float: right">LogOut</a>
+			<a  class="btn btn-info" href="LogoutServlet" style="float: right">LogOut</a>
 
 	</div>
 	
@@ -50,7 +50,7 @@
                     <td><c:out value="${techtalk.description}" /></td>
                     <td><c:out value="${techtalk.presentor}" /></td>
                     <td><c:out value="${techtalk.techTalkDate}" /></td>
-                    <td><c:out value="${techtalk.status}" /></td>
+                    
                     <td>
                     	<a href="edit?id=<c:out value='${techtalk.id}' />">Edit</a>
                     	&nbsp;&nbsp;&nbsp;&nbsp;

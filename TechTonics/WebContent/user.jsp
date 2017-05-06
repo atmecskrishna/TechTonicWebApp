@@ -14,7 +14,7 @@
 			<h2>
 			Welcome
 			<%=session.getAttribute("user")%></h2>
-			<a  class="btn btn-info" href="logoutServlet" style="float: right">LogOut</a>
+			<a  class="btn btn-info" href="LogoutServlet" style="float: right">LogOut</a>
 
 	</div>
 	

@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.users.GetConnection;
+
 /**
  * AbstractDAO.java
  * This DAO class provides CRUD database operations for the table book
@@ -35,8 +37,7 @@ public class TechTalkDAO {
 			} catch (ClassNotFoundException e) {
 				throw new SQLException(e);
 			}
-			jdbcConnection = DriverManager.getConnection(
-										jdbcURL, jdbcUsername, jdbcPassword);
+			jdbcConnection = GetConnection.getConnection();
 		}
 	}
 	
@@ -59,7 +60,7 @@ public class TechTalkDAO {
 		
 		boolean rowInserted = statement.executeUpdate() > 0;
 		statement.close();
-		disconnect();
+	//	disconnect();
 		return rowInserted;
 	}
 	
@@ -76,7 +77,7 @@ public class TechTalkDAO {
 		
 		boolean rowInserted = statement.executeUpdate() > 0;
 		statement.close();
-		disconnect();
+	//	disconnect();
 		return rowInserted;
 	}
 	
@@ -104,7 +105,7 @@ public class TechTalkDAO {
 		resultSet.close();
 		statement.close();
 		
-		disconnect();
+	//	disconnect();
 		
 		return listTechTalk;
 	}
@@ -134,7 +135,7 @@ public class TechTalkDAO {
 		resultSet.close();
 		statement.close();
 		
-		disconnect();
+	//	disconnect();
 		
 		return listTechTalk;
 	}
@@ -148,7 +149,7 @@ public class TechTalkDAO {
 		
 		boolean rowDeleted = statement.executeUpdate() > 0;
 		statement.close();
-		disconnect();
+	//	disconnect();
 		return rowDeleted;		
 	}
 	
@@ -167,7 +168,7 @@ public class TechTalkDAO {
 		statement.setInt(6, techtalk.getId());
 		boolean rowUpdated = statement.executeUpdate() > 0;
 		statement.close();
-		disconnect();
+		//disconnect();
 		return rowUpdated;		
 	}
 	
@@ -183,7 +184,7 @@ public class TechTalkDAO {
 		
 		boolean rowUpdated = statement.executeUpdate() > 0;
 		statement.close();
-		disconnect();
+		//disconnect();
 		return rowUpdated;		
 	}
 	

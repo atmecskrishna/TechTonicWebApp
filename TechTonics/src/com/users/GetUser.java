@@ -1,6 +1,7 @@
 package com.users;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -10,7 +11,7 @@ public class GetUser {
 	{
 		
 		Connection connection=GetConnection.getConnection();
-		java.sql.PreparedStatement statement =  connection.prepareStatement("select * from techtalkusers where username ='"+userName+"'");
+		PreparedStatement statement =  connection.prepareStatement("select * from techtalkusers where username ='"+userName+"'");
 		
 		ResultSet set=statement.executeQuery();
 		

@@ -17,6 +17,7 @@
 	</div>
 	<center>
 		<h1>ATMECS Requested Tech Talks</h1>
+		<h2><a href="list">list All TechTalk</a></h2>
 	</center>
     <div align="center">
         <table border="1" cellpadding="5">
