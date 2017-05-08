@@ -423,7 +423,7 @@ margin-left: 30px;
 			     <h2>SIGN UP</h2>
 			<input type="text" required name = "userName" placeholder="User Name" />
 			<input type="password" required name = "password" placeholder="Password" />
-			<input type="email" required name = "emailId" placeholder="Email" />
+			<input type="email" pattern="[a-z0-9._%+-]+@[atmecs]+\.[a-z]{2,3}$" required name = "emailId" placeholder="Email" />
 			<input type="hidden" name="role" size="5" value=1 />
 			
 			<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
