@@ -421,9 +421,10 @@ margin-left: 30px;
 			  		 <div class="cont_form_sign_up">
 			<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
 			     <h2>SIGN UP</h2>
-			<input type="text" name = " emailId"placeholder="Email" />
-			<input type="text" name = "userName" placeholder="User Name" />
-			<input type="password" name = "password" placeholder="Password" />
+			<input type="text" required name = "userName" placeholder="User Name" />
+			<input type="password" required name = "password" placeholder="Password" />
+			<input type="email" required name = "emailId" placeholder="Email" />
+			<input type="hidden" name="role" size="5" value=1 />
 			
 			<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
 			

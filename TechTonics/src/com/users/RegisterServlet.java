@@ -41,9 +41,9 @@ public class RegisterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 	
-	String name=request.getParameter("userName");
-	String email=request.getParameter("emailId");
-	String password=request.getParameter("password");
+	String name=  request.getParameter("userName");
+	String email= request.getParameter("emailId");
+	String password= request.getParameter("password");
 	int role = Integer.parseInt(request.getParameter("role"));
 	System.out.println(name + email + password);
 	Connection connection= GetConnection.getConnection();
@@ -63,12 +63,12 @@ public class RegisterServlet extends HttpServlet {
 			int number=statement.executeUpdate();
 			if(number == 1)
 				request.setAttribute("message","SuccessFully Registered.");
-
+			
 		}
 		else{
 			request.setAttribute("Message","Email Id already Exist...");
 		}
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("signinup.jsp");
 		
 	}
 	catch (SQLException e1) {
